@@ -1,0 +1,43 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:16
+    user: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: ${PGPASSWORD}
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+      - "./initdb.d:/docker-entrypoint-initdb.d:ro"
+    ports:
+      - "${PGPORT}:5432"
+  pg_dump:
+    image: postgres:16
+    user: $UID
+    depends_on: 
+      - postgres
+    entrypoint: "/bin/bash -c 'pg_dump warehouse > /mnt/$(date +%Y-%m-%d_%H-%M).sql'"
+    environment:
+      PGHOST: postgres
+      PGUSER: ${PGUSER}
+      PGPORT: ${PGPORT}
+      PGPASSWORD: ${PGPASSWORD}
+    volumes:
+      - "./data:/mnt"
+  pg_load:
+    image: postgres:16
+    user: $UID
+    depends_on: 
+      - postgres
+    entrypoint: "/mnt/reload_database.sh"
+    environment:
+      PGHOST: postgres
+      PGUSER: ${PGUSER}
+      PGDATABASE: warehouse
+      PGPORT: ${PGPORT}
+      PGPASSWORD: ${PGPASSWORD}
+    volumes:
+      - "./data:/mnt"
+
+volumes:
+  pgdata:
