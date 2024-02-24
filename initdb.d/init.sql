@@ -53,12 +53,12 @@ CREATE INDEX committee_party_idx ON committee(party);
 -- contributor
 CREATE TABLE contributor (
     id serial,
-    contributor_name VARCHAR(50),
+    contributor_name VARCHAR(150),
     contributor_street_1 VARCHAR(50),
     contributor_street_2 VARCHAR(50),
     contributor_city VARCHAR(50),
     contributor_state CHAR(2),
-    contributor_zip NUMERIC(5),
+    contributor_zip NUMERIC(10),
     CONSTRAINT contributor_pk PRIMARY KEY (id)
 );
 
