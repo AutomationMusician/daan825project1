@@ -9,11 +9,12 @@ CREATE DATABASE warehouse;
 -- contribution_date
 CREATE TABLE contribution_date (
     id serial,
-    rawdate timestamp,
-    weekofyear NUMERIC(2),
-    CONSTRAINT orderdate_pk PRIMARY KEY (id)
+    "date" DATE UNIQUE,
+    week_num NUMERIC(1),
+    CONSTRAINT contribution_date_pk PRIMARY KEY (id)
 );
-CREATE INDEX weekofyear_idx ON contribution_date(weekofyear);
+CREATE INDEX contribution_date_idx ON contribution_date("date");
+CREATE INDEX contribution_date_week_num_idx ON contribution_date(week_num);
 
 -- contributor_employer
 CREATE TABLE contributor_employer (
