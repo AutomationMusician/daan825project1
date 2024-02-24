@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DUMP_FILE=$1
+
 ### Wait for postgres to be ready ###
 timeout_limit=30
 timeout_counter=0
@@ -17,8 +19,7 @@ done
 echo "Postgres has started"
 
 ### Initialize database ###
-script_dir=$(dirname "$0")
 set -e
 psql -h ${PGHOST} -p ${PGPORT} -U postgres -d postgres -c "DROP DATABASE IF EXISTS warehouse"
 psql -h ${PGHOST} -p ${PGPORT} -U postgres -d postgres -c "CREATE DATABASE warehouse"
-psql -h ${PGHOST} -p ${PGPORT} -U postgres -d warehouse -f ${script_dir}/dump/warehouse.sql
+psql -h ${PGHOST} -p ${PGPORT} -U postgres -d warehouse -f ${DUMP_FILE}
