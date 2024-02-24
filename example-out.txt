@@ -1,0 +1,5 @@
+ amount |  zip  |    date    | week_num | employer | occupation | state |     committee     | party | contributor_name | contributor_street_1 | contributor_street_2 | contributor_city 
+--------+-------+------------+----------+----------+------------+-------+-------------------+-------+------------------+----------------------+----------------------+------------------
+  50.00 | 89415 | 2020-11-29 |        1 | RETIRED  | RETIRED    | NV    | PERDUE FOR SENATE | R     | PHILLIPS, WILLOW | PO BOX 566           | 921 I STREET         | HAWTHORNE
+(1 row)
+

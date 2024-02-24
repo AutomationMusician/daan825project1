@@ -19,7 +19,7 @@ CREATE INDEX contribution_date_week_num_idx ON contribution_date(week_num);
 -- contributor_employer
 CREATE TABLE contributor_employer (
     id serial,
-    "name" VARCHAR(50),
+    "name" VARCHAR(50) UNIQUE,
     CONSTRAINT contributor_employer_pk PRIMARY KEY (id)
 );
 CREATE INDEX contributor_employer_name_idx ON contributor_employer("name");
@@ -27,7 +27,7 @@ CREATE INDEX contributor_employer_name_idx ON contributor_employer("name");
 -- contributor_occupation
 CREATE TABLE contributor_occupation (
     id serial,
-    "name" VARCHAR(50),
+    "name" VARCHAR(50) UNIQUE,
     CONSTRAINT contributor_occupation_pk PRIMARY KEY (id)
 );
 CREATE INDEX contributor_occupation_name_idx ON contributor_occupation("name");
@@ -35,7 +35,7 @@ CREATE INDEX contributor_occupation_name_idx ON contributor_occupation("name");
 -- contributor_state
 CREATE TABLE contributor_state (
     id serial,
-    "name" VARCHAR(50),
+    "name" VARCHAR(50) UNIQUE,
     CONSTRAINT contributor_state_pk PRIMARY KEY (id)
 );
 CREATE INDEX contributor_state_name_idx ON contributor_state("name");
@@ -43,7 +43,7 @@ CREATE INDEX contributor_state_name_idx ON contributor_state("name");
 -- committee
 CREATE TABLE committee (
     id serial,
-    "name" VARCHAR(50),
+    "name" VARCHAR(50) UNIQUE,
     party CHAR(1), -- 'D' or 'R'
     CONSTRAINT committee_pk PRIMARY KEY (id)
 );
@@ -58,7 +58,7 @@ CREATE TABLE contributor (
     contributor_street_2 VARCHAR(50),
     contributor_city VARCHAR(50),
     contributor_state CHAR(2),
-    contributor_zip NUMERIC(10),
+    contributor_zip INT,
     CONSTRAINT contributor_pk PRIMARY KEY (id)
 );
 
@@ -67,7 +67,7 @@ CREATE TABLE contribution_fact (
     id serial,
     contribution_date_id INT,
     contributor_state_id INT,
-    contributor_zip NUMERIC(5),
+    contributor_zip INT,
     contributor_employer_id INT,
     contributor_occupation_id INT,
     committee_id INT,
