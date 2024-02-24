@@ -22,4 +22,4 @@ echo "Postgres has started"
 set -e
 psql -h ${PGHOST} -p ${PGPORT} -U postgres -d postgres -c "DROP DATABASE IF EXISTS warehouse"
 psql -h ${PGHOST} -p ${PGPORT} -U postgres -d postgres -c "CREATE DATABASE warehouse"
-psql -h ${PGHOST} -p ${PGPORT} -U postgres -d warehouse -f ${DUMP_FILE}
+psql -h ${PGHOST} -p ${PGPORT} -U postgres -d warehouse -f /mnt/${DUMP_FILE}

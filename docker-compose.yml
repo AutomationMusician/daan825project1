@@ -37,7 +37,7 @@ services:
       PGPORT: ${PGPORT}
       PGPASSWORD: ${PGPASSWORD}
     volumes:
-      - "./data:/mnt"
+      - "./:/mnt"
 
 volumes:
   pgdata:
