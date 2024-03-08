@@ -9,8 +9,8 @@
         <oda-data-source extensionID="com.knime.oda.data.source" name="Reporting" id="51"/>
     </data-sources>
     <data-sets>
-        <oda-data-set extensionID="com.knime.oda.data.set" name="toReport_37" id="59">
-            <text-property name="displayName">toReport_37</text-property>
+        <oda-data-set extensionID="com.knime.oda.data.set" name="top contributing occupations" id="59">
+            <text-property name="displayName">top contributing occupations</text-property>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
@@ -35,17 +35,17 @@
                     </structure>
                     <structure>
                         <property name="position">5</property>
-                        <property name="name">occupation</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">6</property>
                         <property name="name">committee_name</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">7</property>
+                        <property name="position">6</property>
                         <property name="name">party</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">occupation</property>
                         <property name="dataType">string</property>
                     </structure>
                 </list-property>
@@ -81,27 +81,126 @@
                 </structure>
                 <structure>
                     <property name="position">5</property>
-                    <property name="name">occupation</property>
-                    <property name="nativeName">occupation</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">6</property>
                     <property name="name">committee_name</property>
                     <property name="nativeName">committee_name</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">7</property>
+                    <property name="position">6</property>
                     <property name="name">party</property>
                     <property name="nativeName">party</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">occupation</property>
+                    <property name="nativeName">occupation</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
             </list-property>
             <xml-property name="queryText"><![CDATA[37]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="com.knime.oda.data.set" name="top contributing employers" id="67">
+            <text-property name="displayName">top contributing employers</text-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Row ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">contribution_week</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">contributor_employer_id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">num_contributions</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">amount</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">committee_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">party</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">employer</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Reporting</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Row ID</property>
+                    <property name="nativeName">Row ID</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">contribution_week</property>
+                    <property name="nativeName">contribution_week</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">contributor_employer_id</property>
+                    <property name="nativeName">contributor_employer_id</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">num_contributions</property>
+                    <property name="nativeName">num_contributions</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">amount</property>
+                    <property name="nativeName">amount</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">committee_name</property>
+                    <property name="nativeName">committee_name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">party</property>
+                    <property name="nativeName">party</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">employer</property>
+                    <property name="nativeName">employer</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[51]]></xml-property>
         </oda-data-set>
     </data-sets>
     <styles>
@@ -207,6 +306,10 @@
         </simple-master-page>
     </page-setup>
     <body>
+        <text id="68">
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[Donations per week by occupation]]></text-property>
+        </text>
         <extended-item extensionName="Chart" id="61">
             <xml-property name="xmlRepresentation"><![CDATA[<model:ChartWithAxes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attribute="http://www.birt.eclipse.org/ChartModelAttribute" xmlns:data="http://www.birt.eclipse.org/ChartModelData" xmlns:layout="http://www.birt.eclipse.org/ChartModelLayout" xmlns:model="http://www.birt.eclipse.org/ChartModel" xmlns:type="http://www.birt.eclipse.org/ChartModelType">
   <Version>2.6.1</Version>
@@ -1351,7 +1454,7 @@
             <property name="inheritColumns">true</property>
             <property name="height">278pt</property>
             <property name="width">556pt</property>
-            <property name="dataSet">toReport_37</property>
+            <property name="dataSet">top contributing occupations</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Row ID</property>
@@ -1378,12 +1481,6 @@
                     <property name="dataType">float</property>
                 </structure>
                 <structure>
-                    <property name="name">occupation</property>
-                    <text-property name="displayName">occupation</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["occupation"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">committee_name</property>
                     <text-property name="displayName">committee_name</text-property>
                     <expression name="expression" type="javascript">dataSetRow["committee_name"]</expression>
@@ -1393,6 +1490,12 @@
                     <property name="name">party</property>
                     <text-property name="displayName">party</text-property>
                     <expression name="expression" type="javascript">dataSetRow["party"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">occupation</property>
+                    <text-property name="displayName">occupation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["occupation"]</expression>
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
@@ -2541,7 +2644,7 @@
             <property name="inheritColumns">true</property>
             <property name="height">278pt</property>
             <property name="width">556pt</property>
-            <property name="dataSet">toReport_37</property>
+            <property name="dataSet">top contributing occupations</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Row ID</property>
@@ -2568,12 +2671,6 @@
                     <property name="dataType">float</property>
                 </structure>
                 <structure>
-                    <property name="name">occupation</property>
-                    <text-property name="displayName">occupation</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["occupation"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">committee_name</property>
                     <text-property name="displayName">committee_name</text-property>
                     <expression name="expression" type="javascript">dataSetRow["committee_name"]</expression>
@@ -2585,8 +2682,15 @@
                     <expression name="expression" type="javascript">dataSetRow["party"]</expression>
                     <property name="dataType">string</property>
                 </structure>
+                <structure>
+                    <property name="name">occupation</property>
+                    <text-property name="displayName">occupation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["occupation"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
             </list-property>
         </extended-item>
+        <text id="65"/>
         <extended-item extensionName="Chart" id="63">
             <xml-property name="xmlRepresentation"><![CDATA[<model:ChartWithAxes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attribute="http://www.birt.eclipse.org/ChartModelAttribute" xmlns:data="http://www.birt.eclipse.org/ChartModelData" xmlns:layout="http://www.birt.eclipse.org/ChartModelLayout" xmlns:model="http://www.birt.eclipse.org/ChartModel" xmlns:type="http://www.birt.eclipse.org/ChartModelType">
   <Version>2.6.1</Version>
@@ -3734,7 +3838,7 @@
             <property name="inheritColumns">true</property>
             <property name="height">278pt</property>
             <property name="width">556pt</property>
-            <property name="dataSet">toReport_37</property>
+            <property name="dataSet">top contributing occupations</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Row ID</property>
@@ -3761,12 +3865,6 @@
                     <property name="dataType">float</property>
                 </structure>
                 <structure>
-                    <property name="name">occupation</property>
-                    <text-property name="displayName">occupation</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["occupation"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">committee_name</property>
                     <text-property name="displayName">committee_name</text-property>
                     <expression name="expression" type="javascript">dataSetRow["committee_name"]</expression>
@@ -3776,6 +3874,12 @@
                     <property name="name">party</property>
                     <text-property name="displayName">party</text-property>
                     <expression name="expression" type="javascript">dataSetRow["party"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">occupation</property>
+                    <text-property name="displayName">occupation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["occupation"]</expression>
                     <property name="dataType">string</property>
                 </structure>
             </list-property>
@@ -4924,7 +5028,7 @@
             <property name="inheritColumns">true</property>
             <property name="height">278pt</property>
             <property name="width">556pt</property>
-            <property name="dataSet">toReport_37</property>
+            <property name="dataSet">top contributing occupations</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">Row ID</property>
@@ -4951,12 +5055,6 @@
                     <property name="dataType">float</property>
                 </structure>
                 <structure>
-                    <property name="name">occupation</property>
-                    <text-property name="displayName">occupation</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["occupation"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
                     <property name="name">committee_name</property>
                     <text-property name="displayName">committee_name</text-property>
                     <expression name="expression" type="javascript">dataSetRow["committee_name"]</expression>
@@ -4968,8 +5066,18 @@
                     <expression name="expression" type="javascript">dataSetRow["party"]</expression>
                     <property name="dataType">string</property>
                 </structure>
+                <structure>
+                    <property name="name">occupation</property>
+                    <text-property name="displayName">occupation</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["occupation"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
             </list-property>
         </extended-item>
+        <text id="69">
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[Donations per week by occupation]]></text-property>
+        </text>
     </body>
     <list-property name="images">
         <structure>
