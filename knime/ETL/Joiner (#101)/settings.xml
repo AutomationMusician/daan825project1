@@ -95,18 +95,13 @@
         <config key="leftColumnSelectionConfig">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="11"/>
+                <entry key="array-size" type="xint" value="6"/>
                 <entry key="0" type="xstring" value="committee_name"/>
-                <entry key="1" type="xstring" value="contributor_name"/>
-                <entry key="2" type="xstring" value="contributor_street_1"/>
-                <entry key="3" type="xstring" value="contributor_street_2"/>
-                <entry key="4" type="xstring" value="contributor_city"/>
-                <entry key="5" type="xstring" value="contributor_state"/>
-                <entry key="6" type="xstring" value="contributor_zip"/>
-                <entry key="7" type="xstring" value="contributor_occupation"/>
-                <entry key="8" type="xstring" value="contribution_receipt_amount"/>
-                <entry key="9" type="xstring" value="week_num"/>
-                <entry key="10" type="xstring" value="contribution_date_id"/>
+                <entry key="1" type="xstring" value="contributor_state"/>
+                <entry key="2" type="xstring" value="contributor_zip"/>
+                <entry key="3" type="xstring" value="contributor_occupation"/>
+                <entry key="4" type="xstring" value="contribution_receipt_amount"/>
+                <entry key="5" type="xstring" value="week_num"/>
             </config>
             <config key="excluded_names">
                 <entry key="array-size" type="xint" value="1"/>
@@ -195,7 +190,7 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 816070, Cols: 11"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 816070, Cols: 7"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
@@ -219,6 +214,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="a3cfa4c4-7983-4c9b-8c1b-b5e2ea1785ef"/>
+        <entry key="file_store_id" type="xstring" value="a3e1218d-7773-4618-a9c7-475d36dd4d16"/>
     </config>
 </config>

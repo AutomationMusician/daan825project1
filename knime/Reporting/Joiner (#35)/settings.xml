@@ -96,7 +96,7 @@
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
                 <entry key="array-size" type="xint" value="4"/>
-                <entry key="0" type="xstring" value="week_num"/>
+                <entry key="0" type="xstring" value="contribution_week"/>
                 <entry key="1" type="xstring" value="committee_id"/>
                 <entry key="2" type="xstring" value="num_contributions"/>
                 <entry key="3" type="xstring" value="amount"/>
@@ -115,10 +115,10 @@
             </config>
             <config key="datatype">
                 <config key="typelist">
-                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
-                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
                 </config>
@@ -157,7 +157,7 @@
         <entry key="text" type="xstring" value="replace occupation id%%00010with occupation name"/>
         <entry key="contentType" type="xstring" value="text/plain"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
-        <entry key="x-coordinate" type="xint" value="-7"/>
+        <entry key="x-coordinate" type="xint" value="-127"/>
         <entry key="y-coordinate" type="xint" value="311"/>
         <entry key="width" type="xint" value="107"/>
         <entry key="height" type="xint" value="24"/>
@@ -189,7 +189,7 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 70, Cols: 5"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 90, Cols: 5"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
@@ -213,6 +213,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="519f023e-cc9a-439b-b318-df13ef39f154"/>
+        <entry key="file_store_id" type="xstring" value="9f308480-8423-4596-9f8d-c4656950b1e3"/>
     </config>
 </config>

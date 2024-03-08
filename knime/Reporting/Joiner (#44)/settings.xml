@@ -157,10 +157,10 @@
         <entry key="text" type="xstring" value="replace committee_id%%00010with candidate and party"/>
         <entry key="contentType" type="xstring" value="text/plain"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
-        <entry key="x-coordinate" type="xint" value="129"/>
+        <entry key="x-coordinate" type="xint" value="1"/>
         <entry key="y-coordinate" type="xint" value="311"/>
-        <entry key="width" type="xint" value="104"/>
-        <entry key="height" type="xint" value="13"/>
+        <entry key="width" type="xint" value="120"/>
+        <entry key="height" type="xint" value="24"/>
         <entry key="alignment" type="xstring" value="CENTER"/>
         <entry key="borderSize" type="xint" value="0"/>
         <entry key="borderColor" type="xint" value="0"/>
@@ -189,7 +189,7 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 70, Cols: 6"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 90, Cols: 6"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
@@ -213,6 +213,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="2367cf1b-8ba4-4599-95ed-8de67e961ba5"/>
+        <entry key="file_store_id" type="xstring" value="f3fb78fb-681f-4f8a-9df0-f515a719da6a"/>
     </config>
 </config>

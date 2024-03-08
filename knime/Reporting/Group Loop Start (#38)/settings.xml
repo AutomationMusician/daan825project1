@@ -13,9 +13,9 @@
         </config>
         <config key="Variable_2">
             <entry key="type" type="xstring" value="variable"/>
-            <entry key="name" type="xstring" value="week_num"/>
-            <entry key="class" type="xstring" value="DOUBLE"/>
-            <entry key="value" type="xdouble" value="0.0"/>
+            <entry key="name" type="xstring" value="contribution_week"/>
+            <entry key="class" type="xstring" value="INTEGER"/>
+            <entry key="value" type="xint" value="0"/>
         </config>
         <config key="Variable_3">
             <entry key="type" type="xstring" value="variable"/>
@@ -36,13 +36,13 @@
             <entry key="type" type="xstring" value="variable"/>
             <entry key="name" type="xstring" value="currentIteration"/>
             <entry key="class" type="xstring" value="INTEGER"/>
-            <entry key="value" type="xint" value="13"/>
+            <entry key="value" type="xint" value="17"/>
         </config>
         <config key="Variable_7">
             <entry key="type" type="xstring" value="variable"/>
-            <entry key="name" type="xstring" value="week_num"/>
-            <entry key="class" type="xstring" value="DOUBLE"/>
-            <entry key="value" type="xdouble" value="5.0"/>
+            <entry key="name" type="xstring" value="contribution_week"/>
+            <entry key="class" type="xstring" value="INTEGER"/>
+            <entry key="value" type="xint" value="5"/>
         </config>
         <config key="Variable_8">
             <entry key="type" type="xstring" value="variable"/>
@@ -54,7 +54,7 @@
             <entry key="type" type="xstring" value="variable"/>
             <entry key="name" type="xstring" value="groupIdentifier"/>
             <entry key="class" type="xstring" value="STRING"/>
-            <entry key="value" type="xstring" value="%5.0%%00037%3%"/>
+            <entry key="value" type="xstring" value="%5%%00037%3%"/>
         </config>
     </config>
     <config key="internal_node_subsettings">
@@ -69,15 +69,14 @@
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
                 <entry key="array-size" type="xint" value="2"/>
-                <entry key="0" type="xstring" value="week_num"/>
+                <entry key="0" type="xstring" value="contribution_week"/>
                 <entry key="1" type="xstring" value="committee_id"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="4"/>
+                <entry key="array-size" type="xint" value="3"/>
                 <entry key="0" type="xstring" value="contributor_occupation_id"/>
                 <entry key="1" type="xstring" value="num_contributions"/>
                 <entry key="2" type="xstring" value="amount"/>
-                <entry key="3" type="xstring" value="occupation"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">
@@ -88,10 +87,10 @@
             </config>
             <config key="datatype">
                 <config key="typelist">
-                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
-                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
                     <entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
                 </config>
@@ -107,7 +106,7 @@
         <entry key="text" type="xstring" value="loop over%%00010each week"/>
         <entry key="contentType" type="xstring" value="text/plain"/>
         <entry key="bgcolor" type="xint" value="16777215"/>
-        <entry key="x-coordinate" type="xint" value="-311"/>
+        <entry key="x-coordinate" type="xint" value="-431"/>
         <entry key="y-coordinate" type="xint" value="236"/>
         <entry key="width" type="xint" value="104"/>
         <entry key="height" type="xint" value="24"/>
@@ -139,12 +138,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 16, Cols: 5"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 2076, Cols: 5"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="8aa6d07d-3d0e-4458-bf2e-8f10c9da3f6b"/>
+        <entry key="file_store_id" type="xstring" value="1bcb5369-6300-4750-a3d0-c87dcc6762e3"/>
     </config>
 </config>

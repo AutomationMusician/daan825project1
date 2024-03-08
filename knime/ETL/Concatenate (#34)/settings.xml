@@ -6,9 +6,9 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="intersection_of_columns" type="xboolean" value="false"/>
-        <entry key="append_suffix" type="xboolean" value="true"/>
         <entry key="fail_on_duplicates" type="xboolean" value="false"/>
+        <entry key="append_suffix" type="xboolean" value="true"/>
+        <entry key="intersection_of_columns" type="xboolean" value="false"/>
         <entry key="suffix" type="xstring" value="_dup"/>
         <entry key="enable_hiliting" type="xboolean" value="false"/>
     </config>
@@ -68,6 +68,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="060b3524-fc7a-41b5-ad18-d31f604a1100"/>
+        <entry key="file_store_id" type="xstring" value="dc1da134-dff6-4b9e-a906-55a531886ddb"/>
     </config>
 </config>
