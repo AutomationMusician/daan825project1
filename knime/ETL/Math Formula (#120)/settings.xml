@@ -6,9 +6,9 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <entry key="append_column" type="xboolean" value="true"/>
-        <entry key="replaced_column" type="xstring" value="contributor_zip"/>
         <entry key="expression" type="xstring" value="if ($contributor_zip$ &gt; 9999, round($contributor_zip$/10000), $contributor_zip$)"/>
+        <entry key="replaced_column" type="xstring" value="contributor_zip"/>
+        <entry key="append_column" type="xboolean" value="true"/>
         <entry key="convert_to_int" type="xboolean" value="true"/>
     </config>
     <config key="nodeAnnotation">
@@ -53,6 +53,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="f14f1bce-f8ec-4a11-bd58-e6f985c2aba2"/>
+        <entry key="file_store_id" type="xstring" value="d81f64c8-6b69-4f94-876a-9c67a65b10f5"/>
     </config>
 </config>
