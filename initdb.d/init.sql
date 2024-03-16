@@ -42,7 +42,6 @@ CREATE INDEX committee_party_idx ON committee(party);
 
 -- fact table
 CREATE TABLE contribution_fact (
-    id serial,
     contribution_week INT,
     contributor_state_id INT,
     contributor_zip INT,
@@ -51,7 +50,7 @@ CREATE TABLE contribution_fact (
     committee_id INT,
     amount NUMERIC(8,2),
     num_contributions INT,
-    CONSTRAINT contribution_fact_pk PRIMARY KEY(id),
+    CONSTRAINT contribution_fact_pk PRIMARY KEY(contribution_week, contributor_state_id, contributor_zip, contributor_employer_id, contributor_occupation_id, committee_id),
     CONSTRAINT contribution_fact_contributor_state_fk
         FOREIGN KEY(contributor_state_id)
             REFERENCES contributor_state(id),
