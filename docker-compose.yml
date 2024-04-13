@@ -38,6 +38,18 @@ services:
       PGPASSWORD: ${PGPASSWORD}
     volumes:
       - "./:/mnt"
+  hadoop:
+    image: automationmusician/psu-hadoop:latest
+    container_name: hadoop-project
+    volumes:
+      - "./:/root/workspace"
+      - "../:/root/workspace-parent"
+    ports:
+      - "2222:22"
+      - "8042:8042"
+      - "9864:9864"
+      - "9870:9870"
+      - "8088:8088"
 
 volumes:
   pgdata:
