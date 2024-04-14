@@ -10,3 +10,5 @@ hadoop fs -put /root/workspace-parent/11-30_12-06.csv /user/root/project/raw/11-
 hadoop fs -put /root/workspace-parent/12-07_12-13.csv /user/root/project/raw/12-07_12-13.csv
 hadoop fs -put /root/workspace-parent/12-14_12-20.csv /user/root/project/raw/12-14_12-20.csv
 hadoop fs -put /root/workspace-parent/12-21_12_27.csv /user/root/project/raw/12-21_12_27.csv
+
+hadoop fs -ls /user/root/project/raw
