@@ -1,10 +1,7 @@
 #!/bin/bash -ex
 
-hadoop fs -mkdir /user
-hadoop fs -mkdir /user/root
-hadoop fs -mkdir /user/root/project
-hadoop fs -mkdir /user/root/project/raw/
-hadoop fs -mkdir /user/root/project/output/
+hadoop fs -mkdir -p /user/root/project/raw/
+hadoop fs -mkdir -p /user/root/project/output/
 
 hadoop fs -put /root/workspace-parent/11-23_11-29.csv /user/root/project/raw/11-23_11-29.csv
 hadoop fs -put /root/workspace-parent/11-30_12-06.csv /user/root/project/raw/11-30_12-06.csv
