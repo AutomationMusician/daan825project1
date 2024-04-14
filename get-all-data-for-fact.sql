@@ -1,5 +1,5 @@
 SELECT 
-    contribution_fact.amount, contribution_fact.num_contributions, contribution_fact.contributor_zip, contribution_fact.contribution_week,
+    contribution_fact.amount, contribution_fact.num_contributions, contribution_fact.contribution_week,
     contributor_employer.name as employer,
     contributor_occupation.name as occupation,
     contributor_state.name as "state",

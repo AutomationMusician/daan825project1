@@ -44,13 +44,12 @@ CREATE INDEX committee_party_idx ON committee(party);
 CREATE TABLE contribution_fact (
     contribution_week INT,
     contributor_state_id INT,
-    contributor_zip INT,
     contributor_employer_id INT,
     contributor_occupation_id INT,
     committee_id INT,
     amount NUMERIC(8,2),
     num_contributions INT,
-    CONSTRAINT contribution_fact_pk PRIMARY KEY(contribution_week, contributor_state_id, contributor_zip, contributor_employer_id, contributor_occupation_id, committee_id),
+    CONSTRAINT contribution_fact_pk PRIMARY KEY(contribution_week, contributor_state_id, contributor_employer_id, contributor_occupation_id, committee_id),
     CONSTRAINT contribution_fact_contributor_state_fk
         FOREIGN KEY(contributor_state_id)
             REFERENCES contributor_state(id),
@@ -66,7 +65,6 @@ CREATE TABLE contribution_fact (
 );
 CREATE INDEX contribution_fact_committee_id_idx ON contribution_fact(committee_id);
 CREATE INDEX contribution_fact_contributor_state_id_idx ON contribution_fact(contributor_state_id);
-CREATE INDEX contribution_fact_contributor_zip_idx ON contribution_fact(contributor_zip);
 CREATE INDEX contribution_fact_contributor_employer_id_idx ON contribution_fact(contributor_employer_id);
 CREATE INDEX contribution_fact_contributor_occupation_id_idx ON contribution_fact(contributor_occupation_id);
 CREATE INDEX contribution_fact_contribution_week_idx ON contribution_fact(contribution_week);
