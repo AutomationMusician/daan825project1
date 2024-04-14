@@ -1,4 +1,5 @@
 /data
+/hadoop/data
 
 ## KNIME files
 .knimeLock
