@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-# load bl alias
+# create bl alias
 shopt -s expand_aliases
 alias bl='beeline -u jdbc:hive2://localhost:10000 -n root'
 

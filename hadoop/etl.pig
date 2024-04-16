@@ -11,7 +11,7 @@ contributions = FILTER ranked_contributions by $0>1;
 contributions = foreach contributions generate committee_name, contributor_state, contributor_employer, contributor_occupation, contribution_receipt_amount, $contribution_week as contribution_week;
 
 -- remove commas from fields so that it can be read as a comma-delimited document
-contributions = foreach contributions generate REPLACE(committee_name,',','') as committee_name, REPLACE(contributor_state,',','') as contributor_state, REPLACE(contributor_employer,',','') as contributor_employer, REPLACE(contributor_occupation,',','') as contributor_occupation, contribution_receipt_amount, $contribution_week as contribution_week;
+contributions = foreach contributions generate REPLACE(committee_name,',','') as committee_name, REPLACE(contributor_state,',','') as contributor_state, REPLACE(contributor_employer,',','') as contributor_employer, REPLACE(contributor_occupation,',','') as contributor_occupation, contribution_receipt_amount, contribution_week;
 
 -- filter out rows with missing values
 contributions = FILTER contributions BY committee_name != '';
@@ -26,5 +26,6 @@ aggregated_contributions = FOREACH grouped_contributions GENERATE group, SUM(con
 -- convert to proper format before storing
 table_format = FOREACH aggregated_contributions GENERATE group.contribution_week as contribution_week, group.contributor_state as contributor_state, group.contributor_employer as contributor_employer, group.contributor_occupation as contributor_occupation, group.committee_name as committee, amount, num_contributions;
 
+-- store data
 STORE table_format INTO '/user/root/project/output/$contribution_week' USING PigStorage (',');
 

@@ -1,8 +1,5 @@
 #!/bin/bash -ex
 
-# # Run in interactive mode:
-# pig -p input_file="/user/root/project/raw/11-23_11-29.csv" -p contribution_week=1
-
 filenames=("11-23_11-29.csv" "11-30_12-06.csv" "12-07_12-13.csv" "12-14_12-20.csv" "12-21_12_27.csv")
 
 for i in "${!filenames[@]}"; do 

@@ -8,7 +8,7 @@
         <entry key="authored-by" type="xstring" value="joshuafishman"/>
         <entry key="authored-when" type="xstring" value="2024-03-06 22:30:05 -0500"/>
         <entry key="lastEdited-by" type="xstring" value="joshuafishman"/>
-        <entry key="lastEdited-when" type="xstring" value="2024-04-14 22:57:29 -0400"/>
+        <entry key="lastEdited-when" type="xstring" value="2024-04-16 14:25:08 -0400"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
@@ -18,10 +18,10 @@
             <entry key="text" type="xstring" value="&lt;p&gt;get top contributing employers by committee by week&lt;/p&gt;"/>
             <entry key="contentType" type="xstring" value="text/html"/>
             <entry key="bgcolor" type="xint" value="16777215"/>
-            <entry key="x-coordinate" type="xint" value="-1025"/>
-            <entry key="y-coordinate" type="xint" value="55"/>
-            <entry key="width" type="xint" value="1065"/>
-            <entry key="height" type="xint" value="420"/>
+            <entry key="x-coordinate" type="xint" value="-950"/>
+            <entry key="y-coordinate" type="xint" value="50"/>
+            <entry key="width" type="xint" value="740"/>
+            <entry key="height" type="xint" value="235"/>
             <entry key="alignment" type="xstring" value="LEFT"/>
             <entry key="borderSize" type="xint" value="10"/>
             <entry key="borderColor" type="xint" value="12633286"/>
